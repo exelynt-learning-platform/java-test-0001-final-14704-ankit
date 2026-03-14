@@ -1,40 +1,21 @@
-package java_test_0001_12101;
-
 public class Test01 {
     public static void main(String[] args) {
-        int n = 5;
-
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n - i; j++) {
+        int n = 9;
+        int m = n/2;
+        for (int i = 0; i < n; i++) {
+            int d = Math.min(i, n-1-i);
+            int s1 = m-d;
+            for (int j = 0; j<s1; j++) {
                 System.out.print(" ");
             }
-            
             System.out.print("*");
-            
-            if (i > 1) {
-                for (int j = 1; j <= 2 * i - 3; j++) {
+            if (d > 0) {
+                int s2 = 2*d-1;
+                for (int j = 0; j<s2; j++) {
                     System.out.print(" ");
                 }
                 System.out.print("*");
             }
-            
-            System.out.println();
-        }
-
-        for (int i = n - 1; i >= 1; i--) {
-            for (int j = 1; j <= n - i; j++) {
-                System.out.print(" ");
-            }
-            
-            System.out.print("*");
-            
-            if (i > 1) {
-                for (int j = 1; j <= 2 * i - 3; j++) {
-                    System.out.print(" ");
-                }
-                System.out.print("*");
-            }
-            
             System.out.println();
         }
     }
